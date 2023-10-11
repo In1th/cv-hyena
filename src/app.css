@@ -3,6 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply m-0;
-    background-color: theme('colors.background');
+    @apply m-0 bg-background text-text;
 }
