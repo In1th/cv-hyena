@@ -1,6 +1,6 @@
-<section class="mx-32 my-64 border-2 flex flex-col">
+<section class="mx-32 my-64 border-2 flex flex-col relative z-10">
     <div class="m-auto">
-        <h1 class="text-7xl bg-background h-fit w-fit p-4 px-10 relative bottom-16">About me</h1>
+        <h1 class="text-7xl bg-background h-fit w-fit p-4 px-10 relative bottom-16 z-10">About me</h1>
     </div>
     <div class="flex flex-wrap justify-center p-16 pt-0 w-full gap-32">
         <div>
@@ -11,4 +11,5 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempore perferendis delectus minima quam assumenda est magnam? Distinctio libero omnis adipisci est, cumque voluptatibus iure. Ut iure veniam perspiciatis vitae?</p>
         </div>
     </div>
+    <div class="h-full w-full border-2 border-primary absolute z-0 translate-x-[8px] translate-y-[-8px]"></div>
 </section>
