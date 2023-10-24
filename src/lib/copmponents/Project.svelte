@@ -1,4 +1,21 @@
-<article class="border-background border-2 flex flex-col max-h-[500px] p-3 gap-5 cursor-pointer">
-    <img src='placeholder_hero.jpg' alt='placeholder' class='max-h-[80%] aspect-square object-top object-cover'/>
-    <h2 class="text-4xl">Project</h2>
-</article>
+<script lang="ts">
+    import ProjectLarge from "./ProjectLarge.svelte";
+    import ProjectMedium from "./ProjectMedium.svelte";
+    import ProjectSmall from "./ProjectSmall.svelte";
+
+    export let id = '';
+    export let weight: number;
+    export let title = 'title';
+    export let tags: string[] = [];
+    export let imgUrl = 'placeholder_hero.jpg';
+
+    const props = {id, title, tags, imgUrl}
+</script>
+
+{#if weight === 3}
+    <ProjectLarge {...props} />
+{:else if  weight === 2}
+    <ProjectMedium {...props} />
+{:else}
+    <ProjectSmall {...props} />
+{/if}

@@ -4,8 +4,8 @@ import Socials from "./Socials.svelte";
 
 </script>
 <section class="relative flex content-center w-full min-h-[90vh] overflow-hidden">
-    <div class="z-10 basis-1/2 flex flex-col flex-wrap justify-center pl-32">
-        <h1 class=" font-bold text-8xl">Jakub</h1>
+    <div class="z-30 basis-1/2 flex flex-col flex-wrap justify-center pl-32">
+        <h1 class=" font-bold text-8xl text-primary">Jakub</h1>
         <h1 class="text-text font-bold text-8xl mb-5">Tymiński</h1>
         <div class="w-1/2">
             <Line disableX/>
@@ -18,16 +18,17 @@ import Socials from "./Socials.svelte";
             <p class="text-2xl">Wrocław, Poland</p>
         </div>
     </div>
-    <div class="z-10 basis-1/2 flex flex-col pr-32">
+    <div class="z-30 basis-1/2 flex flex-col pr-32">
         <div class="mt-auto flex">
             <div class="ml-auto">
                 <Socials vertical/>
             </div>
         </div>
     </div>
-    <div class="absolute w-full flex justify-center content-center">
+    <div class="absolute w-full flex m-auto justify-center content-center  ">
         <img src="placeholder_hero.jpg" alt="me" 
-            class="max-h-[1200px]"
+        class="max-w-[700px] max-h-[1200px] z-10"
         />
+        <div class="w-full max-w-[700px] h-full absolute z-20 bg-gradient-to-b from-[transparent] from-20% to-background to-65%"></div>
     </div>
 </section>

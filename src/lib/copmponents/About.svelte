@@ -11,5 +11,5 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempore perferendis delectus minima quam assumenda est magnam? Distinctio libero omnis adipisci est, cumque voluptatibus iure. Ut iure veniam perspiciatis vitae?</p>
         </div>
     </div>
-    <div class="h-full w-full border-2 border-primary absolute z-0 translate-x-[8px] translate-y-[-8px]"></div>
+    <!-- <div class="h-full w-full border-2 border-primary absolute z-0 translate-x-[8px] translate-y-[-8px]"></div> -->
 </section>
