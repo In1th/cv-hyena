@@ -4,6 +4,6 @@
     export let description: string;
 </script>
 
-<a href={link} title={description} class="group bg-text rounded-3xl p-2 flex content-center justify-center flex-wrap">
+<a href={link} title={description} class="group bg-text rounded-full p-2 flex content-center justify-center flex-wrap">
     <svelte:component this={icon}/>
 </a>

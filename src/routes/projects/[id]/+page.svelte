@@ -1,5 +1,6 @@
 <script>
 	import Line from "$lib/copmponents/Line.svelte";
+    import Left from "$lib/icons/Left.svelte";
 	import { inview } from "svelte-inview";
 	import { fade, slide } from "svelte/transition";
 
@@ -25,12 +26,14 @@
 	<!-- svelte-ignore a11y-invalid-attribute -->
 	<button
 		on:click={() => history.back()}
-		class="absolute top-0 p-4 cursor-pointer z-20">></button
-	>
-	<div class="absolute z-10 bottom-16 px-4 w-full">
-		<div class="h-24">
+		title="Go back"
+		class="group absolute top-2 p-4 left-2 z-20 hover:bg-secondary hover:opacity-50 rounded-xl transition">
+		<Left/>
+	</button>
+	<div class="absolute z-10 bottom-24 px-4 w-full">
+		<div class="h-24 z-20">
 			{#if isInView}
-			<h2 style:--title="title-{data.id}" class="text-8xl" in:slide={{duration: 900}}>
+			<h2 style:--title="title-{data.id}" class="text-8xl text-primary" in:slide={{duration: 900}}>
 				{data.meta.title}
 			</h2>
 			{/if}
@@ -38,7 +41,7 @@
 		<Line disableX />
 		<div class="h-6">
 			{#if isInView}
-				<p class="text-2xl" in:fade={{duration: 200}}>{data.meta.description}</p>
+				<p class="text-2xl p-4 text-text" in:fade={{duration: 200}}>{data.meta.description}</p>
 			{/if}
 		</div>
 	</div>
