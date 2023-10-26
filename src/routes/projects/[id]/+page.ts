@@ -6,7 +6,8 @@ export const load = async ({ params }) => {
 
     return {
         content: project.default,
-        meta: project.metadata
+        meta: project.metadata,
+        id: params.id
     }
   }
   catch (e) {

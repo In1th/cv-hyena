@@ -23,8 +23,8 @@ async function getProjects() {
         3: projects.filter(p => p.weight === 3),
     }
     const res = [...map[3], ...shuffleProjects(map[1], map[2])];
-    // console.log(res)
-	return res
+
+    return res
 }
 
 const shuffleProjects = (pr2: Project[], pr1: Project[]) => {

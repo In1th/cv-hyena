@@ -5,11 +5,12 @@
 
     export let id = '';
     export let weight: number;
+    export const description: string = '';
     export let title = 'title';
     export let tags: string[] = [];
-    export let imgUrl = 'placeholder_hero.jpg';
-
-    const props = {id, title, tags, imgUrl}
+    export let image = 'placeholder_hero.jpg';
+    
+    const props = {id, title, tags, image}
 </script>
 
 {#if weight === 3}

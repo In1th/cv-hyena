@@ -5,3 +5,19 @@
 body {
     @apply m-0 bg-background text-text;
 }
+
+.markdown h1 {
+    @apply text-7xl;
+}
+
+.markdown h2 {
+    @apply text-5xl;
+}
+
+.markdown h3 {
+    @apply text-3xl;
+}
+
+.markdown p {
+    @apply py-4;
+}

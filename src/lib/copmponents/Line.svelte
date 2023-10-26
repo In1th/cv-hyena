@@ -5,7 +5,7 @@
 </script>
 
 {#if horizontal}
-     <div class='bg-white border-t-[2px]' class:mx-8={!disableX} class:my-8={!disableY}></div>
+     <div class=' border-accent border-t-[2px]' class:mx-8={!disableX} class:my-8={!disableY}></div>
 {:else}
-     <div class='bg-white border-r-[2px]' class:mx-8={!disableX} class:my-8={!disableY}></div>
+     <div class='border-r-[2px]' class:mx-8={!disableX} class:my-8={!disableY}></div>
 {/if}

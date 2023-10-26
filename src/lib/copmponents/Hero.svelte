@@ -18,17 +18,20 @@ import Socials from "./Socials.svelte";
             <p class="text-2xl">Wrocław, Poland</p>
         </div>
     </div>
-    <div class="z-30 basis-1/2 flex flex-col pr-32">
+    <div class="z-30 basis-1/2 flex flex-col pr-32 mb-16">
         <div class="mt-auto flex">
             <div class="ml-auto">
                 <Socials vertical/>
             </div>
         </div>
     </div>
-    <div class="absolute w-full flex m-auto justify-center content-center  ">
-        <img src="placeholder_hero.jpg" alt="me" 
-        class="max-w-[700px] max-h-[1200px] z-10"
-        />
-        <div class="w-full max-w-[700px] h-full absolute z-20 bg-gradient-to-b from-[transparent] from-20% to-background to-65%"></div>
+    <div class="absolute w-full h-full flex m-auto justify-center content-center ">
+        <div class="border-primary h-[800px] aspect-square absolute z-0 border-8 border-dashed rounded-full animate-[spin_60s_linear_infinite]"></div>
+        <div class="relative max-w-[700px]">
+            <img src="placeholder_hero.jpg" alt="me" 
+            class="z-10 relative"
+            />
+            <div class="top-0 w-full h-full absolute z-20 bg-gradient-to-b from-[transparent] from-20% to-background to-90%"></div>
+        </div>
     </div>
 </section>
