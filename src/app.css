@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 body {
     @apply m-0 bg-background text-text;
