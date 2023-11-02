@@ -4,7 +4,7 @@
 
     let isInView = false;
 </script>
-<section class="mx-32 my-64 min-h-[500px]" 
+<section class="mx-6 my-16 md:mx-32 md:my-64 min-h-[500px]" 
     use:inview={{ unobserveOnEnter: true, rootMargin: "-20%" }}
     on:change={(/** @type {{ detail: { inView: boolean; }; }} */ event) => {
         isInView = event.detail.inView;
