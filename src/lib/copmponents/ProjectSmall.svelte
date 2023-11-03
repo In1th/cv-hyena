@@ -17,8 +17,8 @@ use:inview={{ unobserveOnEnter: true }}
         isInView = event.detail.inView;
     }}>
     {#if isInView}
-        <a href={`/projects/${id}`} class="border-background border-2 h-full flex flex-col p-3 gap-5 cursor-pointer" in:fade={{delay: 300, duration: 200}}>
-            <img src={image} alt='placeholder' style:--id="image-{id}" class='max-h-[80%] aspect-square object-top object-cover'/>
+        <a href={`/projects/${id}`} class="border-background border-2 h-64 md:h-full flex flex-col p-3 gap-5 cursor-pointer" in:fade={{delay: 300, duration: 200}}>
+            <img src={image} alt='placeholder' style:--id="image-{id}" class='max-h-[70%] aspect-square object-top object-cover'/>
             <h2 class="text-4xl" style:--title="title-{id}">{title}</h2>
         </a>
     {/if}

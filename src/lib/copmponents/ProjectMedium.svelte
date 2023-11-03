@@ -1,4 +1,5 @@
 <script >
+    import { goto } from "$app/navigation";
     import Right from "$lib/icons/Right.svelte";
 import { inview } from "svelte-inview";
     import { fade } from "svelte/transition";
@@ -13,25 +14,36 @@ import { inview } from "svelte-inview";
     export let image = 'placeholder_hero.jpg';
 
     let isInView = false;
+
+    $: outerWidth = 0;
+
+    const onClick = () => {
+        goto(`/projects/${id}`)
+    }
 </script>
 
-<div class="col-span-2 max-h-[500px]"
+<svelte:window bind:outerWidth/>
+
+<button 
+    class="2xl:col-span-2 max-h-[500px] text-left"
+    on:click={onClick}
+    disabled={outerWidth >= 768}
     use:inview={{ unobserveOnEnter: true}}
     on:change={(/** @type {{ detail: { inView: boolean; }; }} */ event) => {
         isInView = event.detail.inView;
     }}>
     {#if isInView}
-        <article class=" border-background border-2 h-full flex p-3" in:fade={{delay: 100, duration: 200}}>
-            <img src={image} alt='placeholder'  style:--id="image-{id}" class=' max-w-[80%] aspect-square object-[0_-10rem] object-cover'/>
+        <article class=" border-background border-2 h-full flex flex-col md:flex-row p-3" in:fade={{delay: 100, duration: 200}}>
+            <img src={image} alt='placeholder'  style:--id="image-{id}" class='max-h-[70%] md:max-h-full md:max-w-[60%] aspect-square object-cover'/>
             <div class="flex flex-col p-6 flex-grow">
                 <h2 class="text-4xl " style:--title="title-{id}">{title}</h2>
-                <div class="flex gap-4 text-accent pt-8 text-2xl">
+                <div class="flex flex-wrap gap-4 text-accent pt-8 text-2xl">
                     {#each tags as tag}
                         <p>{tag}</p>
                     {/each}
                 </div>
-                <p class="py-8">{description}</p>
-                <a class="mt-auto flex" href={`/projects/${id}`}>
+                <p class="hidden md:flex py-8">{description}</p>
+                <a class="hidden md:flex mt-auto" href={`/projects/${id}`}>
                     <button class=" text-text bg-primary ml-auto h-fit p-5 my-auto flex">
                         <b>Learn more</b>
                         <Right/>
@@ -40,7 +52,7 @@ import { inview } from "svelte-inview";
             </div>
         </article>
     {/if}
-</div>
+</button>
 
 <style>
 	img {

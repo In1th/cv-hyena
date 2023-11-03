@@ -7,12 +7,12 @@ import Socials from "./Socials.svelte";
     <div class="absolute w-full h-full flex m-auto justify-center content-center ">
         <div class="hidden xl:block border-primary h-[800px] aspect-square absolute z-0 border-8 border-dashed rounded-full animate-[spin_180s_linear_infinite]"></div>
         <div class="hidden xl:block border-secondary border-t-4 w-[1000px] bottom-48 right-32 absolute z-10"></div>
-        <div class="hidden md:block w-[300px] h-[100px] bottom-16 right-32 absolute z-10" id="box"></div>
-        <div class="relative max-w-[700px]">
+        <div class="hidden min-[1570px]:block w-[300px] h-[100px] bottom-16 right-32 absolute z-10" id="box"></div>
+        <div class="relative max-w-[700px] h-fit">
             <img src="placeholder_hero.jpg" alt="me" 
             class="z-10 relative"
             />
-            <div class="top-0 w-full h-full absolute z-20 bg-gradient-to-b from-[transparent] from-20% to-background to-90%"></div>
+            <div class="top-0 w-full h-[101%] absolute z-20 bg-gradient-to-b from-[transparent] from-20% to-background to-90%"></div>
         </div>
     </div>
     <div class="mt-[400px] md:mt-0 flex min-h-[90vh] justify-center">

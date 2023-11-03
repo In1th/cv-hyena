@@ -1,4 +1,5 @@
 <script>
+    import { goto } from "$app/navigation";
     import Right from "$lib/icons/Right.svelte";
 import { inview } from "svelte-inview";
     import { fade } from "svelte/transition";
@@ -12,14 +13,24 @@ import { inview } from "svelte-inview";
     $: tagArr = tags.join(" /// ").split(" ");
 
     let isInView = false;
+
+    $: outerWidth = 0;
+
+    const onClick = () => {
+        goto(`/projects/${id}`)
+    }
 </script>
 
-<div
-    class="col-span-3 max-h-[500px]"
+<svelte:window bind:outerWidth/>
+
+<button
+    class="2xl:col-span-3 max-h-[500px]"
     use:inview={{ unobserveOnEnter: true}}
     on:change={(/** @type {{ detail: { inView: boolean; }; }} */ event) => {
         isInView = event.detail.inView;
     }}
+    on:click={onClick}
+    disabled={outerWidth >= 1024}
 >
     {#if isInView}
         <article class="border-background border-2 flex flex-col h-full p-3" in:fade={{duration: 600}}>
@@ -27,9 +38,9 @@ import { inview } from "svelte-inview";
                 src={image}
                 alt="placeholder"
                 style:--id="image-{id}"
-                class="max-h-[80%] aspect-square object-[0_-40rem] object-cover"
+                class="max-h-[80%] aspect-square object-cover"
             />
-            <div class="flex-grow flex align-center px-5">
+            <div class="flex-grow flex flex-wrap align-center px-5">
                 <h2 class="text-4xl my-auto" style:--title="title-{id}">
                     {title}
                 </h2>
@@ -43,7 +54,7 @@ import { inview } from "svelte-inview";
                      <p>///</p>
                      <p>Word 3</p> -->
                 </div>
-                <a href={`/projects/${id}`} class="ml-auto h-fit my-auto">
+                <a href={`/projects/${id}`} class="hidden lg:block ml-auto h-fit my-auto">
                     <button class=" text-text bg-primary p-5 flex">
                         <b>Learn more</b> 
                         <Right/>
@@ -52,7 +63,7 @@ import { inview } from "svelte-inview";
             </div>
         </article>
     {/if}
-</div>
+</button>
 
 <style>
     img {

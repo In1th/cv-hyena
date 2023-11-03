@@ -6,22 +6,29 @@
     let more = false;
     const noOfRows = 2;
 
-    $: visibleProjects = more? projects: (() => {
+    $: outerWidth = 0;
+    $: projectsToPick = outerWidth >= 1536 ? projects : [...projects].sort((p1, p2) => -(p1.weight - p2.weight))
+    $: visibleProjects = more? projectsToPick: trimProjects(projectsToPick);
+
+    const trimProjects = (prjs: ProjectType[]) => {
         let score = 0;
         let idx = 0;
         const res: ProjectType[] = [];
-        while (score < noOfRows * 3 && idx < projects.length) {
-            res.push(projects[idx])
-            score += projects[idx].weight;
+        while (score < noOfRows * 3 && idx < prjs.length) {
+            res.push(prjs[idx])
+            score += prjs[idx].weight;
             idx++;
         }
         return res
-    })();
+    }
 
 </script>
+
+<svelte:window bind:outerWidth/>
+
 <section class="relative bg-text text-background flex flex-col">
-    <h1 class=" font-bold text-8xl p-16">My projects</h1>
-    <section class="grid grid-cols-3 px-32 pt-32 pb-16 gap-16">
+    <h1 class=" font-bold text-5xl md:text-8xl p-16">My projects</h1>
+    <section class="grid grid-cols-1 2xl:grid-cols-3 mx-6 md:px-32 pt-12 md:pt-32 pb-16 gap-8 md:gap-16">
         {#each visibleProjects as project}
             <Project {...project}/>
         {/each}
