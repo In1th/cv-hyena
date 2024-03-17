@@ -12,6 +12,7 @@ import { inview } from "svelte-inview";
      */
     export let tags = [];
     export let image = 'placeholder_hero.jpg';
+    export let image2 = 'placeholder_hero.jpg';
 
     let isInView = false;
 
@@ -25,7 +26,7 @@ import { inview } from "svelte-inview";
 <svelte:window bind:outerWidth/>
 
 <button 
-    class="2xl:col-span-2 max-h-[500px] text-left"
+    class="2xl:col-span-2 max-h-[800px] text-left"
     on:click={onClick}
     disabled={outerWidth >= 768}
     use:inview={{ unobserveOnEnter: true}}
@@ -34,7 +35,7 @@ import { inview } from "svelte-inview";
     }}>
     {#if isInView}
         <article class=" border-background border-2 h-full flex flex-col md:flex-row p-3" in:fade={{delay: 100, duration: 200}}>
-            <img src={image} alt='placeholder'  style:--id="image-{id}" class='max-h-[70%] md:max-h-full md:max-w-[60%] aspect-square object-cover'/>
+            <img src={image} alt='placeholder'  style:--id="image-{id}" class='max-h-[80%] md:max-h-full md:max-w-[40%] aspect-square object-cover'/>
             <div class="flex flex-col p-6 flex-grow">
                 <h2 class="text-4xl " style:--title="title-{id}">{title}</h2>
                 <div class="flex flex-wrap gap-4 text-accent pt-8 text-2xl">
@@ -42,7 +43,7 @@ import { inview } from "svelte-inview";
                         <p>{tag}</p>
                     {/each}
                 </div>
-                <p class="hidden md:flex py-8">{description}</p>
+                <p class="hidden md:flex py-8" style="text-align: justify;">{description}</p>
                 <a class="hidden md:flex mt-auto" href={`/projects/${id}`}>
                     <button class=" text-text bg-primary ml-auto h-fit p-5 my-auto flex">
                         <b>Learn more</b>
@@ -60,5 +61,9 @@ import { inview } from "svelte-inview";
 	}
 	h2 {
 		view-transition-name: var(--title);
+        text-align: justify;
 	}
+    p {
+    text-align: justify;
+    }
 </style>
