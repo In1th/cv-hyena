@@ -1,11 +1,11 @@
 ---
-title: Example post
+title: 12345
 description: This is an example post for developement.
 image: placeholder_hero.jpg
 tags:
   - tag1
   - svelte
-weight: 3
+weight: 1
 ---
 
 ## Markdown

@@ -8,18 +8,20 @@
 
 <section class="flex gap-2" class:flex-col={vertical}>
     <SocialBall
-        link='github.com'
-        description='Github'
-        icon={Github}
+    link="www.linkedin.com/in/jakub-tymiński"
+    description='Linkedin'
+    icon={Linkedin}
     />
-    <SocialBall
+    
+  <!--  <SocialBall 
         link='twitter.com'
         description='Twitter'
         icon={Twitter}
     />
-    <SocialBall
-        link='linkedin.com'
-        description='Linkedin'
-        icon={Linkedin}
+   <SocialBall
+        link='github.com'
+        description='Github'
+        icon={Github}
     />
+  -->
 </section>

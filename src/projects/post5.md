@@ -1,11 +1,11 @@
 ---
 
 weight: 2
-title: Robot mini scara
-description: "opis"
-image: Mini_scara_1.png
+title: Rama frezarki CNC
+description: "Projekt oraz wykonanie ramy frezarki do obróbki materiałów takich jak drewno, polimery oraz metale kolorowe. Zoptymalizowana pod kątem osiągnięcia jak największej sztywności przy zachowaniu niskich kosztów oraz łatwości produkcji"
+image: FrezarkaV2_1.png
 tags:
-    - projekt własny
+    - Projekt oraz wykonanie na zamówienie
 
 number_of_tiles: 1
 
@@ -41,4 +41,5 @@ Text6: "TEKST 6"
 Gallery_image1: Placeholder_photo.png
 Gallery_image2: Placeholder_photo.png
 Gallery_image3: Placeholder_photo.png
+
 ---
