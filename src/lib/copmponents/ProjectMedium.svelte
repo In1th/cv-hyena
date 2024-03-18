@@ -12,7 +12,6 @@ import { inview } from "svelte-inview";
      */
     export let tags = [];
     export let image = 'placeholder_hero.jpg';
-    export let image2 = 'placeholder_hero.jpg';
 
     let isInView = false;
 
@@ -37,13 +36,13 @@ import { inview } from "svelte-inview";
         <article class=" border-background border-2 h-full flex flex-col md:flex-row p-3" in:fade={{delay: 100, duration: 200}}>
             <img src={image} alt='placeholder'  style:--id="image-{id}" class='max-h-[80%] md:max-h-full md:max-w-[40%] aspect-square object-cover'/>
             <div class="flex flex-col p-6 flex-grow">
-                <h2 class="text-4xl " style:--title="title-{id}">{title}</h2>
-                <div class="flex flex-wrap gap-4 text-accent pt-8 text-2xl">
+                <h2 class="text-4xl" style:--title="title-{id}; font-size: calc(1vw);">{title}</h2>
+                <div class="flex flex-wrap gap-4 text-accent pt-8 text-2xl" >
                     {#each tags as tag}
-                        <p>{tag}</p>
+                        <p> {tag}</p>
                     {/each}
                 </div>
-                <p class="hidden md:flex py-8" style="text-align: justify;">{description}</p>
+                <p class="hidden md:flex py-8" style="text-align: justify; font-size: calc(1vw);">{description}</p>
                 <a class="hidden md:flex mt-auto" href={`/projects/${id}`}>
                     <button class=" text-text bg-primary ml-auto h-fit p-5 my-auto flex">
                         <b>Learn more</b>

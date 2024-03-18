@@ -21,7 +21,7 @@
 		src={`/${data.meta.image}`}
 		alt={data.id}
 		style:--id="image-{data.id}"
-		class="h-[800px] w-screen aspect-square object-cover" style="object-position: center 5%;"
+		class="h-[800px] w-screen aspect-square object-cover" style="object-position: center 30%;"
 
 	/>
 
@@ -35,7 +35,7 @@
 	<div class="absolute z-10 bottom-24 px-4 w-full">
 		<div class="h-9 md:h-24 z-20">
 			{#if isInView}
-			<h2 style:--title="title-{data.id}" class="text-4xl md:text-8xl text-primary" in:slide={{duration: 200}}>
+			<h2 style:--title="title-{data.id}" class="text-1xl md:text-8xl text-primary" style="font-size: calc(5vw)" in:slide={{duration: 200}}>
 				{data.meta.title}
 			</h2>
 			{/if}
@@ -43,7 +43,7 @@
 		<Line disableX />
 		<div class="h-40">
 			{#if isInView}
-				<p class="text-2xl p-4 text-text" in:fade={{duration: 400}}>{data.meta.description}</p>
+				<p class="text-1xl p-4 text-text" style="text-align: justify; font-size: calc(1.5vw);" in:fade={{duration: 400}}>{data.meta.description}</p>
 			{/if}
 		</div>
 	</div>
@@ -53,20 +53,20 @@
 </div>
 
 {#if data.meta.number_of_tiles >= 1}
-    <!--sekscja 3-->
+    <!-- Sekcja 3 -->
     <section class="mx-16 markdown flex">
         <div class="flex-1 flex justify-center items-center">
-            <!-- data content wyrównane do środka -->
-            <t style="white-space: pre-line; font-size: {data.meta.Text_size_1}em; margin-right: 10px;">{data.meta.Text1}</t>
+            <!-- Treść danych wyśrodkowana -->
+            <t style="white-space: pre-line; font-size: {data.meta.Text_size_1}vw; margin-right: 10px;">{data.meta.Text1}</t>
         </div>
       
         <div class="flex-1" style="margin-left: 10px;">
-            <!-- obrazek po prawej -->
+            <!-- Obraz po prawej stronie -->
             <img
                 src={`/${data.meta.image1}`}
                 alt={data.id}
                 style:--id="image-{data.id}"
-                class="h-[h-[100%] w-[100%] md:w-[100%] aspect-square object-top object-cover float-left md:mr-8"
+                class="h-[100%] w-[100%] md:w-[100%] aspect-square object-top object-cover float-left md:mr-8"
             />
         </div>
     </section>
@@ -91,7 +91,7 @@
 
         <div class="flex-1 flex justify-center items-center">
             <!-- data content wyrównane do środka -->
-            <t style="white-space: pre-line; font-size: {data.meta.Text_size_2}em; margin-right: 10px;">{data.meta.Text2}</t>
+            <t style="white-space: pre-line; font-size: {data.meta.Text_size_2}vw; margin-right: 10px;">{data.meta.Text2}</t>
         </div>
       
         
@@ -106,7 +106,7 @@
     <section class="mx-16 markdown flex">
         <div class="flex-1 flex justify-center items-center">
             <!-- data content wyrównane do środka -->
-            <t style="white-space: pre-line; font-size: {data.meta.Text_size_3}em; margin-right: 10px;">{data.meta.Text3}</t>
+            <t style="white-space: pre-line; font-size: {data.meta.Text_size_3}vw; margin-right: 10px;">{data.meta.Text3}</t>
         </div>
       
         <div class="flex-1" style="margin-left: 10px;">
@@ -138,7 +138,7 @@
 
         <div class="flex-1 flex justify-center items-center">
             <!-- data content wyrównane do środka -->
-            <t style="white-space: pre-line; font-size: {data.meta.Text_size_4}em; margin-right: 10px;">{data.meta.Text4}</t>
+            <t style="white-space: pre-line; font-size: {data.meta.Text_size_4}vw; margin-right: 10px;">{data.meta.Text4}</t>
         </div>
       
         
@@ -152,7 +152,7 @@
     <section class="mx-16 markdown flex">
         <div class="flex-1 flex justify-center items-center">
             <!-- data content wyrównane do środka -->
-            <t style="white-space: pre-line; font-size: {data.meta.Text_size_5}em; margin-right: 10px;">{data.meta.Text5}</t>
+            <t style="white-space: pre-line; font-size: {data.meta.Text_size_5}vw; margin-right: 10px;">{data.meta.Text5}</t>
         </div>
       
         <div class="flex-1" style="margin-left: 10px;">
@@ -184,7 +184,7 @@
 
         <div class="flex-1 flex justify-center items-center">
             <!-- data content wyrównane do środka -->
-            <t style="white-space: pre-line; font-size: {data.meta.Text_size_6}em; margin-right: 10px;">{data.meta.Text6}</t>
+            <t style="white-space: pre-line; font-size: {data.meta.Text_size_6}vw; margin-right: 10px;">{data.meta.Text6}</t>
         </div>
       
         

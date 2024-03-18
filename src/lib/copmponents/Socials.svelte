@@ -7,21 +7,10 @@
 </script>
 
 <section class="flex gap-2" class:flex-col={vertical}>
-    <SocialBall
-    link="www.linkedin.com/in/jakub-tymiński"
-    description='Linkedin'
-    icon={Linkedin}
-    />
-    
-  <!--  <SocialBall 
-        link='twitter.com'
-        description='Twitter'
-        icon={Twitter}
-    />
-   <SocialBall
-        link='github.com'
-        description='Github'
-        icon={Github}
-    />
-  -->
+
+  <SocialBall
+  link="https://www.linkedin.com/in/jakub-tymiński"
+  description='Linkedin'
+  icon={Linkedin}
+/>
 </section>

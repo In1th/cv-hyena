@@ -14,15 +14,15 @@
         <div class="m-auto">
             <h1 class="text-4xl md:text-7xl bg-background h-fit w-fit p-4 px-10 relative bottom-10 md:bottom-16 z-10 text-center">About me</h1>
         </div>
-        <div class="flex flex-wrap justify-center p-16 min-[1770px]:px-0 pt-0 w-full gap-32" >
-            <div class="max-w-[800px] w-[80%] aspect-[16/9]">
+        <div class="flex flex-wrap justify-center p-16 min-[2118px]:px-0 pt-0 w-full gap-20" >
+            <div class="max-w-[800px] w-[90%] aspect-[16/9]">
                 <iframe class="w-full h-full" src="https://www.youtube.com/embed/3Q38nxKabHs;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
            </div>
             <div class="border-text w-full border-t-[2px] 
-                          min-[1770px]:border-r-[2px] min-[1770px]:border-t-0 min-[1770px]:w-0"
+                          min-[2118px]:border-r-[2px] min-[2118px]:border-t-0 min-[2118px]:w-0"
             ></div>
-            <div class="max-w-[600px] flex items-center text-center md:text-justify"> 
-                <p>Jestem absolwentem studiów inżynierskich na kierunku elektronika i telekomunikacja na politechnice Biołostockiej. obecnie kontynują naukę na studiach magisterskich na Politechnice Wrocławskiej na k z solidnym wykształceniem oraz entuzjazmem do rozwiązywania złożonych problemów technicznych. Posiadam zdolność analitycznego myślenia oraz doświadczenie w projektowaniu, testowaniu i wdrażaniu układów elektronicznych. Zaangażowany w ciągłe doskonalenie swoich umiejętności technicznych, zmotywowany do dążenia do doskonałości w dziedzinie elektroniki. Poszukuję możliwości rozwoju zawodowego w dynamicznym środowisku branży elektronicznej."</p>
+            <div class="max-w-[800px] w-[90%] flex items-center text-center md:text-justify"> 
+                <p>Jestem młodym inżynierem posiadającym solidne fundamenty teoretyczne oraz bogate doświadczenie praktyczne zdobyte na przestrzeni lat podczas realizacji różnorodnych projektów o charakterze interdyscyplinarnym. Podejmuję się pracy zarówno przy projektach realizowanych w ramach środowiska akademickiego, jak i z własnej inicjatywy i pasji. Posiadam doświadczenie w zakresie projektowania, produkcji addytywnej oraz subtraktywnej, implementacji podzespołów mechanicznych, elektronicznych oraz programowania systemów wbudowanych. </p>
             </div>
         </div>
     </div>
