@@ -1,17 +1,16 @@
 ---
-
 weight: 2
-title: Rama frezarki CNC
-description: "Projekt oraz wykonanie ramy frezarki do obróbki materiałów takich jak drewno, polimery oraz metale kolorowe. Zoptymalizowana pod kątem osiągnięcia jak największej sztywności przy zachowaniu niskich kosztów oraz łatwości produkcji"
-image: FrezarkaV2_1.png
+title: Robot scara
+description: "Platforma pozycjonująca wykorzystująca kinematykę SCARA był projektem realizowanym w kole naukowym IO na Politechnice Białostockiej. Podjąłem się projektu i realizacji części mechanicznej."
+image: Scara_1.png
 tags:
-    - Projekt oraz wykonanie na zamówienie
+    - Projekt realizowany w kole naukowym IO
 
 number_of_tiles: 1
 
-image1: Placeholder_photo.png
+image1: Scara_2.png
 Text_size_1: 1
-Text1: "TEKST 1"
+Text1: "Post w budowie "
 
 
 image2: Placeholder_photo.png
@@ -38,8 +37,13 @@ image6: Placeholder_photo.png
 Text_size_6: 1
 Text6: "TEKST 6"
 
-Gallery_image1: Placeholder_photo.png
-Gallery_image2: Placeholder_photo.png
-Gallery_image3: Placeholder_photo.png
+Gallery_image1: Scara_4.jpg
+Gallery_image2: Scara_5.jpg
+Gallery_image3: Scara_4.jpg
 
 ---
+
+## Markdown
+
+
+
