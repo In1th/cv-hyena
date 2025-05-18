@@ -30,7 +30,7 @@ wytwarzania. Każdy moduł może być indywidualnie skonfigurowany, co pozawala 
 zmianę parametrów pracy wybranej sekcji strefy wykrywania. Dodatkowo, wprowadzenie funkcji
 pomiarowych otwiera możliwości zastosowania urządzenia nie tylko w systemach bezpieczeństwa,
 ale jako element w przemyśle</div>
-    <div><img height=5000 width=5000 src="/Kurtyna_3.png"/></div>
+    <img style="width: 500px; height: 500px;" src="/Kurtyna_3.png"/>
 </div>
 
 
