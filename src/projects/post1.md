@@ -11,11 +11,12 @@ image: inzynierka_main.png
 tags:
     - praca inżynierska
 
-number_of_tiles: 4
+---
 
-image1: inzynierka_main.png
-Text_size_1: 1
-Text1: "Kurtyna świetlna bezpieczeństwa jest aktywnym optoelektronicznym urządzeniem
+
+
+<div style="display: flex; flex-direction: row;">
+    <div>Kurtyna świetlna bezpieczeństwa jest aktywnym optoelektronicznym urządzeniem
 ochronnym stosowanym w przemyśle i szeroko pojętej automatyce. Przeanalizowanie obecnie
 dostępnych rozwiązań, obecnych i przyszłych potrzeb rynku, przegląd literatury z zakresu metod
 generacji i detekcji promieniowania podczerwonego oraz norm, pozwoliło na zgromadzenie zasobu
@@ -30,11 +31,13 @@ liczby wariantów produkcyjnych tego samego modelu urządzenia oraz optymalizacj
 wytwarzania. Każdy moduł może być indywidualnie skonfigurowany, co pozawala na elastyczną
 zmianę parametrów pracy wybranej sekcji strefy wykrywania. Dodatkowo, wprowadzenie funkcji
 pomiarowych otwiera możliwości zastosowania urządzenia nie tylko w systemach bezpieczeństwa,
-ale jako element w przemyśle"
+ale jako element w przemyśle</div>
+    <div><img src="/Kurtyna_3.png"/></div>
+</div>
 
-image2: Kurtyna_3.png
-Text_size_2: 1
-Text2: "Projekt elektroniczny\n
+
+
+### Projekt elektroniczny
 Zaprojektowany został autorski układ elektroniczny łączący w sobie
 rozwiązania z dziedzin: elektroniki cyfrowej, analogowej oraz optoelektroniki.
 Zaproponowane rozwiązanie zostało oparte na mikrokontrolerze STM32G070RBT6.
@@ -56,11 +59,10 @@ urządzenia układ został podzielony na dwie oddzielne płytki PCB, sterującą
 wykonawczą z elementami optoelektronicznymi. Płytki PCB są umieszczone jedna nad
 drugą, a wszystkie wymagane połączenia elektryczne zrealizowane są przez jedno
 złącze, rozwiązanie takie pozwala na redukcję rozmiaru oraz łatwy montaż urządzenia.
-"
 
-image3: Kurtyna_4.png
-Text_size_3: 1
-Text3: " Projekt Mechaniczny\n
+<img src="/Kurtyna_4.png" />
+
+# Projekt Mechaniczny
 Projekt mechaniczny modularnej kurtyny świetlnej obejmował kształtowanie
 charakterystyki optycznej dla diod nadawczych oraz fototranzystorów odbiorczych,
 konstrukcję obudowy zapewniającej ochronę i łatwy dostęp do elementów
@@ -77,11 +79,12 @@ Projektowany system łączenia oparty jest na trzpieniu, który pełni rolę zar
 pozycjonującą, jak i zapewniającą siłę dociskającą między modułami, przekrój
 mechanizmu łączenia modułów z wykorzystaniem trzpienia. Dzięki dwóm dodatkowym pinom lokacyjnym osiągnięto dokładność
 pozycjonowania, a stały odstęp między elementami optoelektronicznymi został
-zachowany dla różnej liczby połączonych modułów."
+zachowany dla różnej liczby połączonych modułów.
 
-image4: Kurtyna_5.png
-Text_size_4: 1
-Text4: " Oprogramowanie\n
+<img src="/Kurtyna_5.png" />
+
+
+# Oprogramowanie
 Kod zarządzający pracą urządzeń został napisany z wykorzystaniem języka C w
 środowisku programistycznym STM32CubeIDE. Napisany kod wykorzystuje szeroką
 gamę funkcjonalności oferowanych przez mikrokontroler STM32G070RBT6, od prostej
@@ -100,18 +103,8 @@ stwarzającego zagrożenie w poprawnym jego funkcjonowaniu. Urządzenie
 wykorzystuje również diody sygnalizacyjne do wizualnej reprezentacji aktywacji
 urządzenia, miejsca w którym została przecięta wiązka aktywująca urządzenie, miejsca
 w którym są aktualnie przecinane wiązki, trybu pracy czy natężenia sygnału
-odbieranego w trybie ustawiania modułu odbiorczego. "
+odbieranego w trybie ustawiania modułu odbiorczego.
 
-image5: Kurtyna_5.png
-Text_size_5: 1
-Text5: "TEKST 5"
-
-image6: Placeholder_photo.png
-Text_size_6: 1
-Text6: "TEKST 6"
-
-Gallery_image1: Kurtyna_7.png
-Gallery_image2: Kurtyna_2.png
-Gallery_image3: Kurtyna_8.png
-
----
+<img src="/Kurtyna_7.png"/>
+<img src="/Kurtyna_2.png"/>
+<img src="/Kurtyna_8.png"/>
