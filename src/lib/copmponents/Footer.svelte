@@ -3,7 +3,7 @@
 
 </script>
 <footer class="flex p-3 pt-16">
-    <p class="my-auto">2024, by Mateusz Kruk, Jakub Tymiński</p>
+    <p class="my-auto">2024-2025, by Mateusz Kruk, Jakub Tymiński</p>
     <div class="ml-auto">
         <Socials/>
     </div>

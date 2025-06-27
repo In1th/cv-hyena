@@ -22,7 +22,7 @@
                           min-[2118px]:border-r-[2px] min-[2118px]:border-t-0 min-[2118px]:w-0"
             ></div>
             <div class="max-w-[800px] w-[90%] flex items-center text-center md:text-justify"> 
-                <p>Jestem młodym inżynierem posiadającym solidne fundamenty teoretyczne oraz bogate doświadczenie praktyczne zdobyte na przestrzeni lat podczas realizacji różnorodnych projektów o charakterze interdyscyplinarnym. Podejmuję się pracy zarówno przy projektach realizowanych w ramach środowiska akademickiego, jak i z własnej inicjatywy i pasji. Posiadam doświadczenie w zakresie projektowania, produkcji addytywnej oraz subtraktywnej, implementacji podzespołów mechanicznych, elektronicznych oraz programowania systemów wbudowanych. </p>
+                <p>I am a young engineer with a solid theoretical foundation and extensive practical experience gained over the years through the implementation of various interdisciplinary projects. I undertake work both within academic environments and on my own initiative and passion. I have experience in design, additive and subtractive manufacturing, mechanical and electronic component implementation, as well as embedded systems programming. Currently working in R&D of consumer electronics for high volume production.</p>
             </div>
         </div>
     </div>
