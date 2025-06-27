@@ -31,7 +31,7 @@ body {
   }
 
 .markdown h1 {
-    @apply text-7xl;
+    @apply text-xl md:text-5xl;
 }
 
 .markdown h2 {
@@ -44,4 +44,17 @@ body {
 
 .markdown p {
     @apply py-4;
+}
+
+.markdown-section {
+  @apply flex flex-col md:flex-row justify-center items-center gap-2;
+
+}
+
+.markdown-section > p {
+  text-align: justify;
+}
+
+.markdown-img {
+  width: clamp(200px, 600px, 600px);
 }

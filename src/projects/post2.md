@@ -1,17 +1,137 @@
 ---
 
 weight: 2
-title: 3-osiowa frezarka CNC
-description: "Wraz z tworzeniem coraz bardziej złożonych urządzeń pojawiła się potrzeba na
-wykonywanie podzespołów o większej wytrzymałości mechanicznej niż materiały polimerowe
-wykorzystywane w druku 3D na drukarkach typu FFF lub MSLA. Projekt frezarki sterowanej
-numerycznie wynikł z mojego zapotrzebowania na urządzenie które umożliwiło by mi szybką i
-dokładną obróbkę materiałów takich jak metale oraz tworzywa kompozytowe przy znacznej
-redukcji kosztów względem rozwiązań dostępnych komercyjnie."
+title: 3-axis CNC milling machine
+description: "With the development of increasingly complex devices, there arose a need to produce components with greater mechanical strength than the polymer materials used in 3D printing on FFF or MSLA printers. The design of the numerically controlled milling machine stemmed from my need for a device that would enable fast and precise machining of materials such as metals and composites, while significantly reducing costs compared to commercially available solutions."
 image: Frezarka_1.png
 tags:
-    - Projekt własny
+    - Independent project
     
+---
+
+
+<!--introduction start, need speceing correction-->
+<h3 style="text-align:center;">Base specification</h3>
+<div class="markdown-section">
+<div>
+<br>
+
+- • X-axis travel - 290 mm
+- • Y-axis travel - 320 mm
+- • Z-axis travel - 120 mm
+- • Spindle - 1,5kW, 24,000 rpm, ER16
+- • Width - 770 mm
+- • Depth - 1050mm
+- • Height  - 1550mm
+- • Control system - linuxCNC
+
+
+</div>
+<img class="markdown-img" src="/Frezarka_1.png"/>
+</div>
+<!--introduction end-->
+
+
+
+
+<!--section 2 start-->
+<h3 style="text-align:center;">Frame Construction</h3>
+<div class="markdown-section">
+<img class="markdown-img" src="/Frezarka_2.png"/>
+<div>
+<p>
+The milling machine frame is made from a composite material consisting of crushed mineral aggregate and epoxy resin in a ratio of 85% aggregate to 15% resin. This solution was chosen for its excellent vibration damping, rigidity, low cost, and ease of manufacturing without specialized tools.
+</p>
+<p>
+The structure consists of two parts: the base (2), which houses the Y-axis, and the gantry (1), which is mounted on the base and contains the X and Z axes. The gantry design ensures high rigidity through double-sided support of the X and Z axes.
+</p>
+<p>
+Both the gantry (1) and base (2) are constructed on 20 mm precision PA13 aluminum plates (3), custom-cut to provide reference planes for linear guides. The aluminum plates are anchored to the composite with screws (4), then encased in MDF molds and cast with the mineral-epoxy mixture.
+</p>
+<p>
+Plates supporting the X and Z axes, the spindle mount, and the T-slot table mount are made from 30 mm thick PA13 aluminum to maintain stiffness without additional composite material.
+</p>
+</div>
+</div>
+<!--section 2 end-->
+
+
+
+<!--section 3 start-->
+<div class="markdown-section">
+<div>
+<h3 style="text-align:center;">Construction of moving axes</h3>
+
+X, Y, and Z axes move along dual perpendicular HGR20R linear guides (5). The reference guide is aligned to a machined aluminum edge, while the second is installed in relation to it, achieving 0.01 mm installation accuracy. Each moving component is supported by four HGH20CA linear bearings (6).
+
+Movement is driven by a 16 mm, 5 mm pitch ball screw (7) with a ball nut and bearing block (9) to prevent lateral movement. The ball screw is driven by a NEMA23 stepper motor with encoder (10) through a jaw coupling. Inductive sensors (11) on each axis enable homing and overtravel protection.
+</div>
+<img class="markdown-img" src="/Frezarka_3.png"/>
+</div>
+<!--section 3 end-->
+
+
+
+
+<!--section 4 start-->
+<div class="markdown-section">
+<img class="markdown-img" src="/Frezarka_4.png"/>
+<div>
+<h3 style="text-align:center;">Construction of the base and chip removal system</h3>
+
+The machine stands on a welded steel frame made from 60x60 mm profiles, 3 mm wall thickness (12), providing a solid base. An integrated chip evacuation system (14) guides chips into a collection bin under the machine(15). The table also provides mounting points for the enclosure, spindle cooling, control cabinet, and touchscreen arm (16).
+
+30x30 mm steel profiles with 2 mm wall thickness (13) support enclosure panels and non-load-bearing components. The base is mounted on four adjustable feet for leveling and transport. All steel elements are powder-coated to prevent corrosion.
+
+
+</div>
+</div>
+<!--section 4 end-->
+
+
+<!--section 5 start-->
+<div class="markdown-section">
+<div>
+<h3 style="text-align:center;">Housing construction</h3>
+
+The main purpose of the enclosure is to contain machining debris and protect the operator from moving components. Made from 2 mm laser-cut and bent steel sheet (17), the enclosure is spot welded and powder-coated. Panels are installed after mounting the machine frame to the base using self-tapping screws.
+
+A 4 mm bent polycarbonate shield (18) slides linearly at a 45° angle for clear visibility and easy access. The front panel has a door for quick chip bin access (23). The left side houses the control cabinet with a status indicator (20) and adjustable touchscreen arm (19). Component cooling is ensured by ventilation openings (21 and 22).
+
+The machine's 770 mm width allows passage through standard doorways.
+</div>
+<img class="markdown-img" src="/Frezarka_5.png"/>
+</div>
+<!--section 5 end-->
+
+
+<!--section 6 start-->
+<div class="markdown-section">
+<img class="markdown-img" src="/Frezarka_6.png"/>
+<div>
+<h3 style="text-align:center;">Control</h3>
+
+The system is controlled by open-source LinuxCNC software running on a Dell Optiplex 760 PC. The PC communicates with control components via two I/O cards through LPT ports and with the inverter via RS485. Each axis has a dedicated motor driver handling position and current control via step/direction interface.
+
+Drivers are powered from rectified 24VAC transformer voltage. A 12V DC switching power supply powers auxiliary systems like fans, lights, and indicators. The control cabinet includes two circuit breakers: one for the inverter and one for the 230V supply. Each driver and the 12V rail are protected with fuses.
+
+The LPT I/O card features opto-isolation and relays for high-current devices like valves and blowers.
+
+The control panel has a main switch and an emergency stop button. The machine is operated via a touchscreen interface using the customized GMOCCAPY interface.
+</div>
+</div>
+<!--section 4 end-->
+
+
+<!--3 photos side by side at bottom-->
+<div class="mt-32 flex flex-col items-center">
+<img class="markdown-img" src="/Frezarka_7.png"/>
+<img class="markdown-img" src="/Frezarka_9.png"/>
+<img class="markdown-img" src="/Frezarka_8.png"/>
+</div>
+
+
+<!--
 number_of_tiles: 6
 
 image1: Frezarka_1.png
@@ -148,3 +268,5 @@ Gallery_image1: Frezarka_7.png
 Gallery_image2: Frezarka_9.png
 Gallery_image3: Frezarka_8.png
 ---
+
+-->

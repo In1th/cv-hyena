@@ -35,15 +35,15 @@
 	<div class="absolute z-10 bottom-24 px-4 w-full">
 		<div class="h-9 md:h-24 z-20">
 			{#if isInView}
-			<h2 style:--title="title-{data.id}" class="text-1xl md:text-8xl text-primary" style="font-size: calc(5vw)" in:slide={{duration: 200}}>
+			<h2 style:--title="title-{data.id}" class="text-3xl md:text-5xl xl:text-8xl text-primary" in:slide={{duration: 200}}>
 				{data.meta.title}
 			</h2>
 			{/if}
 		</div>
 		<Line disableX />
-		<div class="h-40">
+		<div class="min-h-40">
 			{#if isInView}
-				<p class="text-1xl p-4 text-text" style="text-align: justify; font-size: calc(1.5vw);" in:fade={{duration: 400}}>{data.meta.description}</p>
+				<p class="md:text-1xl p-4 text-text" style="text-align: justify;" in:fade={{duration: 400}}>{data.meta.description}</p>
 			{/if}
 		</div>
 	</div>
@@ -52,7 +52,7 @@
 	/>
 </div>
 
-<section class="mx-16 markdown">
+<section class="mt-2 mx-8 md:mx-16 markdown">
 	<svelte:component this={data.content} />
 </section>
 
@@ -60,16 +60,6 @@
 	img {
 		view-transition-name: var(--id);
 	}
-
-	t {
-    text-align: justify;
-    }
-
-	@media (max-width: 768px) {
-    t {
-        font-size: 0.5em;
-    }
-}
 </style>
 
 
